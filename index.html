@@ -7,16 +7,33 @@
     <title>TSC FEED DAY</title>
   </head>
   <body>
-    <section class="hero">
-      <button id="bb" onclick="goBack()">back</button>
-      <img src="./images/logo.jpg" alt="tractor supply logo" class="logo" />
+    <section id="hero">
+      <img src="./images/logo.png" alt="tractor supply logo" class="logo" />
+
       <div class="searchArea">
-        <input type="number" id="searchBar" name="searchbar" placeholder="Last 5 of SKU" />
+        <input type="number" id="searchBar" placeholder="Last 5 of SKU" />
         <button id="searchButton" onclick="findProduct()">🔍</button>
       </div>
-      <img src="" alt="" id="productImage" />
     </section>
 
+    <section id="hero2">
+      <button id="bb" onclick="goBack()">---</button>
+      <img src="./images/logo.png" alt="tractor supply logo" class="logo2" />
+      <div class="searchArea">
+        <input type="number" id="searchBar2" placeholder="Last 5 of SKU" />
+        <button id="searchButton" onclick="findProduct()">🔍</button>
+      </div>
+    </section>
+
+    <section id="productSection">
+      <img src="" alt="" id="productImage" />
+      <div class="productInfo">
+        <p id="skuText">SKU: 123</p>
+        <p id="upcText">UPC: 5684320395823</p>
+        <p id="isleText">Isle: 4</p>
+      </div>
+      <img src="./images/islemap.png" alt="" id="map" />
+    </section>
     <script src="app.js" defer></script>
   </body>
 </html>
