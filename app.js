@@ -1,7 +1,18 @@
 const jsonData = [
-  { upc: "1111111111", sku: "123", isle: "12", image: "./images/image1.jpg" },
-  { upc: "0987654321", sku: "356", isle: "1", image: "./images/image2.jpg" },
-  { upc: "1111111111", sku: "789", isle: "1", image: "./images/image3.jpg" },
+  { sku: "280072399", name: "Purina Equine Senior Horse Feed, 50 lb. Bag", isle: "8", image: "./images/280072399.webp" },
+  {
+    sku: "138590099",
+    name: "Nutrena ProForce Textured Senior Horse Feed, 50 lb. Bag",
+    isle: "8",
+    image: "./images/138590099.webp",
+  },
+  { sku: "228138299", name: "Nutrena Triumph 14% Senior Horse Feed, 50 lb. Bag", isle: "8", image: "./images/228138299.webp" },
+  {
+    sku: "512176299",
+    name: "Standlee Premium Western Forage Premium Alfalfa Hay Pellet Horse Feed, 40 lb.",
+    isle: "8",
+    image: "./images/512176299.webp",
+  },
 ]
 
 const imageTag = document.getElementById("productImage")
@@ -38,7 +49,6 @@ function findProduct() {
     productSection.style.display = "flex"
     isleMap.style.display = "flex"
     imageTag.src = product.image
-    upcText.innerHTML = "UPC: " + product.upc
     skuText.innerHTML = "SKU: " + product.sku
     document.getElementById("isleText").innerHTML = "Isle: " + product.isle
   } else {
@@ -50,17 +60,12 @@ function searchBySKU(sku) {
   return jsonData.find((item) => item.sku === sku)
 }
 
-function searchByUPC(upc) {
-  return jsonData.find((item) => item.upc === upc)
-}
-
 function goBack() {
   state = 1
   hero1.style.display = "flex"
   hero2.style.display = "none"
   productSection.style.display = "none"
   isleMap.style.display = "none"
-  upcText.innerHTML = ""
   skuText.innerHTML = ""
   document.getElementById("isleText").innerHTML = ""
   searchBar.value = ""
